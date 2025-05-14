@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stilo.css') }}">
 </head>
 <body>
+    <a href="{{ url_for('upload') }}">Adicionar nova imagem</a>
     {% block content %}
-    <h1>Dia das Mães?</h1>
+    <h1>Escolha uma Data</h1>
     <form action="{{ url_for('homepage')}}" method="POST">
         <input type="date" name="hoje" placeholder="Que dia é hoje?"><br>
         <input type="submit" value="Confirmar">
     </form>
+    
     {% endblock %}
 </body>
 </html>

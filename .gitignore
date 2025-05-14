@@ -1,0 +1,7 @@
+# Arquivos de configuração locais
+segurança.py
+
+
+# Arquivos e pastas do Python
+__pycache__/
+segurança.cpython-313.pyc

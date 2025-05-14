@@ -1,0 +1,24 @@
+ <!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Upload de Imagens</title>
+</head>
+<body>
+  <h1>Adicionar Imagem ao Carrossel</h1>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*">
+    <button type="submit">Enviar</button>
+  </form>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <a href="{{ url_for('homepage') }}">Voltar para o Carrossel</a>
+</body>
+</html> 
